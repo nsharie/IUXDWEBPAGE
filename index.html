@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="icon" type="img" href="img/logo.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <title>iUXD: Design your product</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+      }
+
+      .logo {
+        font-size: 1.25rem;
+        font-weight: 700;
+        cursor: none;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0.2rem 0.3rem;
+        text-decoration: none;
+        margin: 1rem 2rem;
+        transition: 2s ease;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+        border-radius: 25px;
+        font-weight: 200;
+        cursor: none;
+      }
+
+      .hero {
+        position: relative;
+        display: table;
+        width: 101%;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .hero-text {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+      }
+
+      .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: contrast(150%);
+      }
+
+      .hero-text {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5;
+      }
+
+      @media (width< 767px) {
+        .info {
+          font-size: small;
+        }
+      }
+
+      @media (768px<width<1000px) {
+        .info {
+          font-size: medium;
+        }
+      }
+
+      .mt {
+        margin-left: 1.5rem;
+      }
+
+      .mtb{
+        margin-top: 1rem;
+      }
+      #preloader{
+        background: #000 url(img/car.gif) no-repeat center;
+        background-size: 15%;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+      }
+      .owl-carousel{
+           margin-top: 5rem;
+            width: 20%;
+        }
+        .owl-carousel .item{
+            width: 80%;
+            height: 50%;
+        }
+        .owl-carousel .item img {
+    width: 100%; /* Set the width to 100% */
+    height: 100%; /* Set the height to 100% */
+    object-fit: cover; /* Make the image cover the entire area */
+    background-color: transparent; /* Set the background color to white */
+}
+
+@media(width<1000px){
+            .slider{
+              display: none;
+            }
+          }
+
+    </style>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#" style="font-family: cursive" class="nav-link"> iUXD </a>
+      </div>
+      <div class="content">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#service" class="nav-link">Service</a>
+        <a href="#footer" class="nav-link">Contact</a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <video class="hero-video" autoplay loop muted>
+        <source src="img/backgd1.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-text">
+        <div class="info">
+          <h1 class="animate-hero">
+            Promote and design your startup with
+            <span class="animate-hero" style="font-size: 3rem; font-family: cursive">iUXD</span>
+          </h1>
+          <p class="animate-hero" style="text-align: center; margin: 0 3rem">
+            Elevate your startup's success with Innovative User Experience
+            Design (IUXD) – where seamless functionality meets captivating
+            aesthetics. Transform ideas into impactful reality, setting your
+            brand apart in the competitive landscape.
+          </p>
+          <div class="mtb animate-hero">
+            <a href="mailto:hi@sridhar.fyi"><button class="btn btn-light" type="button" style="cursor: none;">Let's Connect</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about section -->
+    
+    <section class="about" id="about">
+      <div class="container" style="display: flex; justify-content: center; align-items: center;">
+        <div class="row">
+          <h1 class="text-center animate-abt" style="margin-top: 5rem; margin-bottom: 5rem;" id="about-head">About Us</h1>
+        </div>
+      </div>
+      <div class="information text center">
+        <p>
+          At IUXD Company, we are dedicated to shaping exceptional digital experiences through innovative and user-centric design. Our mission is to bridge the gap between technology and user needs, delivering interfaces that are not only visually stunning but also intuitive and engaging. With a focus on collaboration, we work closely with our clients to understand their goals and transform concepts into seamless, effective user interactions. From user interface design to in-depth user research and usability testing, IUXD Company is committed to staying at the forefront of design trends and technologies. Whether you're in technology, e-commerce, healthcare, finance, or education, we're here to elevate your digital presence and create meaningful connections between your brand and users. Experience the difference with IUXD Company – where innovation meets outstanding user experience.
+        </p>
+        <div class="image-container animate-abt">
+          <img src="img/about-img.jpg" alt="logo">
+        </div>
+      </div>
+      <div class="slider" style="display: flex; justify-content: center; align-items: center;">
+        <div class="owl-carousel">
+          <div class="item">
+            <img src="img/figma.jpeg" alt="Logo 1" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/inVision.jpeg" alt="Logo 2" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/sketck.png" alt="Logo 3" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/sketck.png" alt="Logo 4" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/html.png" alt="Logo 5" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/css.png" alt="Logo 5" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/javascript.png" alt="Logo 5" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="img/bootstrap.png" alt="Logo 5" class="img-fluid">
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- about section -->
+
+    <!-- service section -->
+    <section class="service" id="service">
+
+      <div class="container">
+        <div class="row infor">
+          <h1 class="text-center animate-service" style="margin-top: 2rem; margin-bottom: 1rem;" id="about-head">Services</h1>
+          <h4 class="text-center animate-service" style="color: rgba(0, 0, 0, 0.75); font-weight: 200;">Elevating your digital presence through innovative design, where every pixel tells a story of excellence.</h4>
+        </div>
+      </div>
+
+      <div class="slider1">
+        <div class="c">
+
+          <input type="radio" name="a" id="cr-1" checked>
+          <label for="cr-1" style="--hue: 32"></label>
+          <div class="ci" style="--z: 4">
+              <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%; color: tomato;">What we Do?</h2>
+              <img src="img/whatwe.jpg" style="width: 100%; height: 95%;" alt="What we Do?">
+          </div>
+      
+          <input type="radio" name="a" id="cr-2">
+          <label for="cr-2" style="--hue: 82"></label>
+          <div class="ci" style="--z: 3">
+              <h2 class="ch" style="--h: 82; --s: 80%; --l: 90%">User Experience</h2>
+              <img src="img/userexp.jpg" style="width: 100%; height: 95%;" alt="user experience">
+          </div>
+      
+          <input type="radio" name="a" id="cr-3">
+          <label for="cr-3" style="--hue: 40"></label>
+          <div class="ci" style="--z: 2">
+              <h2 class="ch" style="--h: 40; --s: 100%; --l: 89%">Brand and Identity</h2>
+              <img src="img/branding.jpg" style="width: 100%; height: 95%;"
+                  alt="branding">
+          </div>
+      
+          <input type="radio" name="a" id="cr-4">
+          <label for="cr-4" style="--hue: 210"></label>
+          <div class="ci" style="--z: 1">
+              <h2 class="ch" style="--h: 210; --s: 70%; --l: 90%; color: springgreen;">Design and Motion Graphics</h2>
+              <img src="img/service1.jpg" style="width: 100%; height: 95%;"
+                  alt="Sky and mountains">
+          </div>
+      
+      </div>
+      
+      </div>
+      </div>
+    </section>
+
+    <footer class="footer mt-5" id="footer">
+      <div class="container">
+        <div class="row" id="main">
+          <div class="col-sm-5 mr-auto">
+            <h6 class="abt-animate">About iuxd</h6>
+            <p class="text-muted">
+              Unleashing the power of Innovative User Experience Design, we at
+              iUXD redefine digital encounters through cutting-edge design.
+              Elevate your brand with our expertise, where intuitive interfaces
+              and innovation converge seamlessly.
+            </p>
+            <ul class="list-inline social social-rounded social-sm">
+              <li class="list-inline-item">
+                <a class="a-tag" href="https://www.instagram.com/iuxdstudio/"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item mt">
+                <a class="a-tag" href="https://www.linkedin.com/company/iuxd/"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li class="list-inline-item mt">
+                <a class="a-tag" href="https://www.google.com/maps/place/WeWork/@12.9733179,77.6088358,15z/data=!4m6!3m5!1s0x3bae1680b3bd0f7b:0x5466660c68f2146b!8m2!3d12.9733179!4d77.6088358!16s%2Fg%2F11hcs5n8s9?entry=ttu"><i class="fa fa-map-marker"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <span class="footer-title" id="time">Timings</span>
+            <p class="footer-content" style="line-height: 2.5;">Mon - Fri: 9 AM - 5 PM</p>
+            <p class="footer-content" style="line-height: -2.5;">Sat - Sun: 10 AM - 4 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 text-muted text-center small-xl" style="margin-bottom: 2rem;">
+          © 2023 iUXD - All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <script>var loader = document.getElementById("preloader");
+      window.addEventListener("load", function(){
+        loader.style.display = "none";
+      })
+      </script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+       <script>
+       $(document).ready(function(){
+           $(".owl-carousel").owlCarousel({
+               items: 3, /* change this to 2 or 3 */
+               loop: true,
+               autoplay: true,
+               autoplayTimeout: 2000,
+               autoplayHoverPause: true
+           });
+       });
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
+       <script>
+
+        gsap.registerPlugin(ScrollTrigger) 
+
+        gsap.from(".animate-hero", {
+        scrollTrigger: ".animate-hero", 
+        duration:0.8,
+        opacity:0,
+        y: -150,
+        stagger: 0.3
+        });
+
+        gsap.from(".information", {
+        scrollTrigger: ".information", 
+        duration:3,
+        opacity:0,
+        y: -150,
+        stagger: 0.3
+        });
+
+        gsap.from(".animate-abt", {
+        scrollTrigger: ".animate-abt", 
+        duration:7,
+        opacity:0,
+        x: -200,
+        })
+
+        gsap.from(".animate-service", {
+          scrollTrigger: ".animate-service",
+          duration:12,
+          opacity:0,
+          x:200,
+          stagger: 0.15,
+        })
+
+
+     
+
+        // smooth scroll
+            const lenis = new Lenis()
+
+            lenis.on('scroll', (e) => {
+              // console.log(e)
+            })
+
+            function raf(time) {
+              lenis.raf(time)
+              requestAnimationFrame(raf)
+            }
+
+            requestAnimationFrame(raf)
+       </script>
+       <script type="text/javascript" src="js/script.js"></script>
+      </body>
+</html>
