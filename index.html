@@ -83,7 +83,7 @@
       .hero {
         position: relative;
         display: table;
-        width: 101%;
+        width: 100%;
         height: 400px;
         overflow: hidden;
       }
@@ -104,8 +104,30 @@
         height: 100vh;
         object-fit: cover;
         z-index: -1;
-        filter: contrast(150%);
+        filter: contrast(110%);
       }
+
+      .container-promo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%; /* Set the width of the container to 100% */
+        }
+
+        .promo {
+            /* Additional styles for the promo section */
+            position: relative;
+            width: 70%;
+            height: 60%;
+          }
+          
+          .promo-video {
+            /* Additional styles for the video element */
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
 
       .hero-text {
         height: 100vh;
@@ -140,7 +162,7 @@
         height: 100vh;
         width: 100%;
         position: fixed;
-        z-index: 100;
+        z-index: 400;
       }
       .owl-carousel{
            margin-top: 5rem;
@@ -163,15 +185,244 @@
             }
           }
 
+  @media(max-width<500px){
+  .intro-container p{
+    font-size: 0.1rem;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+  .section a {
+    cursor: pointer;
+  }
+  .section a:hover {
+    text-decoration: none;
+  }
+  
+  .section{
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .full-height{
+    min-height: 100vh;
+    width: 90%;
+  }
+  .over-hide{
+    overflow: hidden;
+  }
+  .padding-tb{
+    padding: 100px 0;
+  }
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+  }
+  .container-service{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 8rem;
+  }
+  .checkbox:checked + label,
+  .checkbox:not(:checked) + label{
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    margin-right: 6px;
+    margin-left: 6px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #bdc3c7;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-image: url(img/whatwe.jpg);
+    animation: border-transform 6s linear infinite alternate forwards;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      animation-play-state: paused;
+  }
+  .checkbox.scnd + label{
+    background-image: url(img/service1.jpg);
+  }
+  .checkbox.thrd + label{
+    background-image: url(img/userexp.jpg);
+  }
+  .checkbox.foth + label{
+    background-image: url(img/branding.jpg);
+  }
+  
+  .checkbox:checked + label{
+    box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
+    transform: scale(1.3);
+      -webkit-animation-play-state: running;
+      -moz-animation-play-state: running;
+      animation-play-state: running;
+  }
+  @keyframes border-transform{
+    0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+    14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+    28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+    42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+    56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+    70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+    84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+  }
+  
+  .slider-height-padding {
+    padding-top: 440px;
+  }
+  
+  .section ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .section ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 400px;
+    border: 5px solid #bdc3c7;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/whatwe.jpg);
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 2.7;
+    color: #343434;
+    writing-mode: vertical-rl;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 25px 0 rgba(16,39,112,.1);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .section ul li span {
+    mix-blend-mode: difference;
+    margin-top: 0.5rem;
+  }
+  ul li:nth-child(2) {
+    background-image: url(img/service1.jpg);
+  }
+  ul li:nth-child(3) {
+    background-image: url(img/userexp.jpg);
+  }
+  ul li:nth-child(4) {
+    background-image: url(img/branding.jpg);
+  }
+  
+  
+  .checkbox.frst:checked ~ ul li:nth-child(1) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+  .checkbox.scnd:checked ~ ul li:nth-child(2) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+  .checkbox.thrd:checked ~ ul li:nth-child(3) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  }
+  .checkbox.foth:checked ~ ul li:nth-child(4) {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 16px;
+  } 
+  
+  
+  @media (max-width: 767px) {
+    .slider-height-padding {
+      padding-top: 340px;
+    }
+    .section ul li {
+      height: 300px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .slider-height-padding {
+      padding-top: 240px;
+    }
+    .section ul li {
+      height: 200px;
+    }
+  }
+
+  @media(350px<width<600px){
+    .full-height{
+      min-height: 45vh;
+    }
+    .padding-tb{
+      padding: 50px 0;
+    }
+
+    .heading{
+      font-size: 1.2rem !important;
+    }
+
+    .value{
+      font-size: 0.8rem !important;
+    }
+  }
+
+  @media(600px<width<1000px){
+    .full-height{
+      min-height: 50vh;
+    }
+    .padding-tb{
+      padding: 50px 0;
+    }
+
+    .heading{
+      font-size: 1.2rem !important;
+    }
+
+    .value{
+      font-size: 0.8rem !important;
+    }
+
+  }
+
+
     </style>
   </head>
   <body>
     <div id="preloader"></div>
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
       <div class="logo">
-        <a href="#" style="font-family: cursive" class="nav-link"> iUXD </a>
+        <a href="#" class="nav-link"> iUXD </a>
       </div>
       <div class="content">
         <a href="#" class="nav-link">Home</a>
@@ -186,13 +437,12 @@
 
     <div class="hero">
       <video class="hero-video" autoplay loop muted>
-        <source src="img/backgd1.mp4" type="video/mp4" />
+        <source src="img/finalBG.mp4" type="video/mp4" />
       </video>
       <div class="hero-text">
         <div class="info">
           <h1 class="animate-hero">
-            Promote and design your startup with
-            <span class="animate-hero" style="font-size: 3rem; font-family: cursive">iUXD</span>
+            Promote and design your startup with iUXD
           </h1>
           <p class="animate-hero" style="text-align: center; margin: 0 3rem">
             Elevate your startup's success with Innovative User Experience
@@ -256,54 +506,72 @@
     
     <!-- about section -->
 
+    <!-- Info Section -->
+
+    <div class="container-intro what-animate">
+      <section class="small-intro">
+          <div class="intro-container" style="text-align: center;">
+              <h1>What We Believe</h1>
+              <p>
+                 As a dynamic design collective specializing in user experience, brand & identity, and motion graphics, we are dedicated to solving businesses UX challenges and crafting meaningful experiences. Our globally diverse team of designers collaborates to offer unique insights and innovative solutions. With a focus on user-centric design processes, we excel in creating cohesive brand identities, utilizing captivating motion graphics, and addressing the intricacies of UX through proven methodologies. By blending cultural perspectives and technical expertise, our collective ensures a holistic and inclusive approach, resulting in impactful design solutions that resonate with clients and users alike.
+              </p>
+          </div>
+      </section>
+    </div>
+
+    <!-- Info Section -->
+
+    <!-- promo-video -->
+    <div class="container-promo">
+      <section class="promo">
+          <video src="img/newCompressed.mp4" autoplay loop muted class="promo-video"></video>
+      </section>
+    </div>
+    <!-- promo-video -->
+
     <!-- service section -->
     <section class="service" id="service">
-
       <div class="container">
         <div class="row infor">
-          <h1 class="text-center animate-service" style="margin-top: 2rem; margin-bottom: 1rem;" id="about-head">Services</h1>
-          <h4 class="text-center animate-service" style="color: rgba(0, 0, 0, 0.75); font-weight: 200;">Elevating your digital presence through innovative design, where every pixel tells a story of excellence.</h4>
+          <p class="text-center animate-service heading" style="font-size: 2.5rem;">Services</p>
+          <p class="text-center animate-service value" style="font-size: 1.2rem;">Elevating your digital presence through innovative design, where every pixel tells a story of excellence. We are a design collective specialising in user experience, brand & identity, and motion graphics. helped many businesses solve their complex Product UX challenges and make the experience joyful for their users.</p>
         </div>
       </div>
-
-      <div class="slider1">
-        <div class="c">
-
-          <input type="radio" name="a" id="cr-1" checked>
-          <label for="cr-1" style="--hue: 32"></label>
-          <div class="ci" style="--z: 4">
-              <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%; color: tomato;">What we Do?</h2>
-              <img src="img/whatwe.jpg" style="width: 100%; height: 95%;" alt="What we Do?">
+      <div class="section full-height animate-service-box over-hide px-4 px-sm-0">
+        <div class="container-service">
+          <div class="row full-height justify-content-center">
+            <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+              <div class="section mx-auto text-center slider-height-padding">
+                      <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
+                      <label for="slide-1"></label>
+                      <input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
+                      <label for="slider-2"></label>
+                      <input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
+                      <label for="slider-3"></label>
+                      <input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
+                      <label for="slider-4"></label>
+                <ul>
+                  <li>
+                    <span> WHAT WE DO? </span>
+                    </li>
+                  <li>
+                    <span> UI/UX </span>
+                    </li>
+                  <li>
+                    <span> USER EXPERIENCE </span>
+                    </li>
+                  <li>
+                    <span> BRANDING </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
           </div>
-      
-          <input type="radio" name="a" id="cr-2">
-          <label for="cr-2" style="--hue: 82"></label>
-          <div class="ci" style="--z: 3">
-              <h2 class="ch" style="--h: 82; --s: 80%; --l: 90%">User Experience</h2>
-              <img src="img/userexp.jpg" style="width: 100%; height: 95%;" alt="user experience">
-          </div>
-      
-          <input type="radio" name="a" id="cr-3">
-          <label for="cr-3" style="--hue: 40"></label>
-          <div class="ci" style="--z: 2">
-              <h2 class="ch" style="--h: 40; --s: 100%; --l: 89%">Brand and Identity</h2>
-              <img src="img/branding.jpg" style="width: 100%; height: 95%;"
-                  alt="branding">
-          </div>
-      
-          <input type="radio" name="a" id="cr-4">
-          <label for="cr-4" style="--hue: 210"></label>
-          <div class="ci" style="--z: 1">
-              <h2 class="ch" style="--h: 210; --s: 70%; --l: 90%; color: springgreen;">Design and Motion Graphics</h2>
-              <img src="img/service1.jpg" style="width: 100%; height: 95%;"
-                  alt="Sky and mountains">
-          </div>
-      
-      </div>
-      
-      </div>
       </div>
     </section>
+    
+    <!-- service section -->
 
     <footer class="footer mt-5" id="footer">
       <div class="container">
@@ -321,7 +589,7 @@
                 <a class="a-tag" href="https://www.instagram.com/iuxdstudio/"><i class="fa fa-instagram"></i></a>
               </li>
               <li class="list-inline-item mt">
-                <a class="a-tag" href="https://www.linkedin.com/company/iuxd/"><i class="fa fa-linkedin"></i></a>
+                <a class="a-tag linkedin" href="https://www.linkedin.com/company/iuxd/"><i class="fa fa-linkedin" style="background-color: white; height: 2rem;"></i></a>
               </li>
               <li class="list-inline-item mt">
                 <a class="a-tag" href="https://www.google.com/maps/place/WeWork/@12.9733179,77.6088358,15z/data=!4m6!3m5!1s0x3bae1680b3bd0f7b:0x5466660c68f2146b!8m2!3d12.9733179!4d77.6088358!16s%2Fg%2F11hcs5n8s9?entry=ttu"><i class="fa fa-map-marker"></i></a>
@@ -402,7 +670,13 @@
           stagger: 0.15,
         })
 
-
+        gsap.from(".what-animate", {
+          scrollTrigger: ".what-animate",
+          duration: 8,
+          opacity: 0,
+          y: -150,
+          stagger: 0.9
+        })
      
 
         // smooth scroll
